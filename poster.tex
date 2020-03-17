@@ -1,4 +1,6 @@
 \documentclass[a1,portrait]{a0poster}
+\usepackage{include/ae-goethe-poster}
+
 
 \RequirePackage[ngerman]{babel}
 \RequirePackage[utf8]{inputenc}
@@ -8,7 +10,8 @@
 \RequirePackage{listingsutf8}
 \RequirePackage{textcomp}
 \RequirePackage{eurosym}
-\usepackage{subfigure}
+\usetikzlibrary{decorations.pathreplacing}
+%\usepackage{subfigure}
 \usepackage{url}
 
 \usepackage[Algorithmus]{algorithm}
@@ -17,7 +20,10 @@
 \usepackage{cite}
 
 
-\usepackage{include/ae-goethe-poster}
+% Please only use to following colors:
+% goetheblau, hellgrau, sandgrau, dunkelgrau, purple, emorot, senfgelb, gruen, magenta, orange
+% sonnengelb, hellgruen, lichtblau
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Defines for mathematical notation. Add additional defines as needed.
@@ -93,15 +99,30 @@
 
 \section{Einleitung}
 \input{include/01_Einleitung.tex}
-\columnbreak
 
+\section{Grundlagen}
+\input{include/02_Grundlagen.tex}
+
+
+\section{Beschreibung}
+\input{include/0x_Beschreibung.tex}
+
+
+\section{Grundlagen}
+\input{include/0x_Auswertung.tex}
+
+\section{blabla}
+\input{include/09_letztes.tex}
+
+
+%\columnbreak
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%   ....... (rechts)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-\section{}
+
 
 
 \end{multicols}
@@ -109,7 +130,7 @@
 
 
 
-\color{goetheblau}{\rule{\textwidth}{0.1cm}}
+%\textcolor{goetheblau}{\rule{\textwidth}{3pt}}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -119,28 +140,13 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-\begin{multicols}{2}
-
-ab 
-
-\columnbreak
-{}
-cd
-
-\end{multicols}
-
-\color{goetheblau}{\rule{\textwidth}{0.1cm}}
+%\begin{multicols}{2}
+%\columnbreak
+%\end{multicols}
+%\textcolor{goetheblau}{\rule{\textwidth}{3pt}}
 
 
 
-
-\begin{multicols}{2}
-
-ab 
-
-\columnbreak{}
-cd
-\end{multicols}
 
 
 \end{document}
