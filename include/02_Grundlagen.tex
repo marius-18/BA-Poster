@@ -1,7 +1,7 @@
 \fett{\cb{}} ist  ein Prozess, bei dem Kanten zufällig getauscht werden. Bei einem \ct{} werden
-zwei verschiedene Knoten $u$ und $v$ ($u\neq v$) zufällig uniform verteilt ausgewählt und deren disjunkte Nachbarschaft
+zwei verschiedene Knoten $u$ und $v$ zufällig uniform verteilt ausgewählt und deren disjunkte Nachbarschaft
 zufällig durchmischt. 
-Dabei muss darauf geachtet werden, dass durch das Tauschen keine Eigenschleifen oder Multikanten
+Dabei muss im Allgemeinen darauf geachtet werden, dass durch das Tauschen keine Eigenschleifen oder Multikanten
 entstehen und dass die Bipartitheit nicht verletzt wird.
 Ein Beispiel ist in Abbildung \ref{fig:curveball_trade_graph} gegeben.
 %
@@ -13,13 +13,13 @@ Ein Beispiel ist in Abbildung \ref{fig:curveball_trade_graph} gegeben.
 \begin{tikzpicture}
 		\tikzset{node style/.style={shape=circle,draw=black, inner sep=5pt,}}
                                 
-\node[node style] at (0, -0.5)     (1)     {$v_1$};
-\node[node style] at (0, -2.5)   (2)     {$v_2$};
+\node[node style,double = dunkelgrau] at (0, -0.5)     (1)     {\small$v_1$};
+\node[node style,double = dunkelgrau] at (0, -2.5)   (2)     {\small$v_2$};
 
 
-\node[node style, fill=sandgrau] at (3, 0.5)     (5)     {$v_3$};
-\node[node style, fill=sonnengelb] at (3, -1.5)   (6)     {$v_4$};
-\node[node style, fill=sonnengelb] at (3, -3.5)   (7)     {$v_5$};
+\node[node style, fill=sandgrau] at (3, 0.5)     (5)     {\small$v_3$};
+\node[node style, fill=sonnengelb] at (3, -1.5)   (6)     {\small$v_4$};
+\node[node style, fill=sonnengelb] at (3, -3.5)   (7)     {\small$v_5$};
 
 
    
@@ -43,12 +43,12 @@ Ein Beispiel ist in Abbildung \ref{fig:curveball_trade_graph} gegeben.
 \begin{tikzpicture}
 \tikzset{node style/.style={shape=circle,draw=black, inner sep=5pt,}}
                                 
-\node[node style] at (0, -0.5)     (1)     {$v_1$};
-\node[node style] at (0, -2.5)   (2)     {$v_2$};
+\node[node style,double = dunkelgrau] at (0, -0.5)     (1)     {\small$v_1$};
+\node[node style,double = dunkelgrau] at (0, -2.5)   (2)     {\small$v_2$};
 
-\node[node style, fill=sandgrau] at (3, 0.5)     (5)     {$v_3$};
-\node[node style, fill=sonnengelb] at (3, -1.5)   (6)     {$v_4$};
-\node[node style, fill=sonnengelb] at (3, -3.5)   (7)     {$v_5$};
+\node[node style, fill=sandgrau] at (3, 0.5)     (5)     {\small$v_3$};
+\node[node style, fill=sonnengelb] at (3, -1.5)   (6)     {\small$v_4$};
+\node[node style, fill=sonnengelb] at (3, -3.5)   (7)     {\small$v_5$};
 
 
 \draw[line width=0.1mm, >=latex]
@@ -60,11 +60,10 @@ Ein Beispiel ist in Abbildung \ref{fig:curveball_trade_graph} gegeben.
 ;
 \end{tikzpicture}
 \caption{Auf einem der beiden Graphen wird ein \ct{} auf den Knoten $v_{1}$ und $v_{2}$ ausgeführt. 
-In der grau markierten gemeinsamen Nachbarschaft liegt $v_{3}$, 
-die disjunkte Nachbarschaft $\{v_{4},v_{5}\}$ ist in gelber Farbe gekennzeichnet.
+Die gemeinsame Nachbarschaft ist in grau gekennzeichnet, 
+die disjunkte Nachbarschaft in gelber Farbe.
 In diesem Beispiel gibt es nur die zwei dargestellten Graphen, die durch Tauschen der disjunkten 
-Nachbarschaft entstehen können. Ein \ct{} würde jeweils mit Wahrscheinlichkeit 0.5 einen der beiden 
-Graphen zurückgeben.}
+Nachbarschaft entstehen können.}
 \label{fig:curveball_trade_graph}
 \end{figure}
 %
@@ -73,26 +72,13 @@ Graphen zurückgeben.}
 
 Ein \fett{\gc{} Tausch} besteht aus mehreren \ct{en}, wobei möglichst 
 jeder Knoten Teil eines solchen \ct{es} sein soll. 
-
-
-
-
-
 Im Fall von bipartiten Graphen werden die \ct{e} lediglich auf den Knoten 
-aus einer der beiden Partitionsklassen ausgeführt. Diese wird als \fett{aktive} Partition
-bezeichnet. 
-
-
+aus einer der beiden Partitionsklassen (diese wird \fett{aktiv} genannt) ausgeführt.
 Somit wird verhindert, dass durch einen \gc{} Tausch Eigenschleifen entstehen oder
-die Bipartitheit verletzt wird. Auch werden dadurch unnötige \ct{e} verhindert.
-
-
-
-
-
-
-
-
+die Bipartitheit verletzt wird. Auch werden dadurch unnötige \ct{e} vermieden, welche den Graph nicht verändern würden.
+Auf Grund der Bipartitheit überschneiden sich 
+die einzelnen \ct{e} %überschneiden sich \red{im bipartiten Fall nicht} 
+nicht und können daher vollständig parallel ausgeführt werden.
 
 %
 %
@@ -113,17 +99,16 @@ die Bipartitheit verletzt wird. Auch werden dadurch unnötige \ct{e} verhindert.
     
     % untere geschweifte Klammer mit Text darunter:
     \foreach \x in {0,4,8} 
- 		\draw[bend angle=60,bend right,  <->,>=latex, very thick] (\x+1,0) to  node[below= 1ex] {\cb{}} (\x+3,0) ;
+ 		\draw[bend angle=60,bend right,  <->,>=latex, very thick] (\x+1,0) to  node[below= 1ex] {\small \cb{}} (\x+3,0) ;
 	
 	
-	\draw[bend angle=60,bend right,  <->,>=latex, very thick, draw=none] (14,0) to  node[below= 1ex] {\textcolor{black}{kein Tausch}} (16,0) ;
+	\draw[bend angle=60,bend right,  <->,>=latex, very thick, draw=none] (14,0) to  node[below= 1.6ex] {\small \textcolor{black}{kein Tausch}} (15,0) ;
 
-	\draw[<-,>=latex, very thick] (13,0) to  node[below= 1ex] {} (15.0,-1) ;
+	\draw[<-,>=latex, very thick] (13,0) to  node[below= 1ex] {} (14.0,-1) ;
 %\node[] at (11.0, -0.7)     (5)     {kein Tausch};
 
   \end{tikzpicture}
-  \caption{\gc{} auf dem zufällig permutierten Array der aktiven Partition. Da die Anzahl der Elemente in
-  der aktiven Permutation ungerade ist, wird auf einem Knoten kein \ct{} ausgeführt.}
+  \caption{\gc{} auf dem zufällig permutierten Array der aktiven Partition. Bei ungerader Anzahl wird ein Knoten ausgelassen.}
   \label{fig:global_curveball_trade_vector}
   
 \end{figure}

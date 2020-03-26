@@ -1,16 +1,19 @@
 Bei der Analyse komplexer Netzwerke, wie beispielsweise soziale Netzwerke, 
 werden die zugrundeliegenden Graphen häufig mit zufälligen Graphen verglichen, 
 um deren Struktur zu untersuchen\cite{DBLP:conf/esa/CarstensH0PTW18}.
-
+%
 Zum Erzeugen von zufälligen Graphen existieren diverse Modelle wie 
 beispielsweise der Erd\H{o}s-R\'enyi-Graph \cite{erdos}
 oder der Gilbert-Graph \cite{gilbert}.
 Diese Graphen
 weisen jedoch in der Regel kaum eine Ähnlichkeit zu dem zu analysierenden Netzwerk auf.
-Deshalb verwendet man Zufallsgraphen, die zu einem gegebenen Graphen eine identische Gradsequenz
-besitzen. Im Zufallsgraph soll also jeder Knoten denselben Grad haben wie im originalen Graph.
+Deshalb verwendet man Zufallsgraphen, 
+bei welchen \red{jeder Knoten denselben Grad wie im originalen Graphen hat}.
+%
+\cb{} \cite{curveball} und \gc{}\cite{DBLP:conf/esa/CarstensH0PTW18} sind Lösungsansätze hierfür.
+%Algorithmen, welche diese Eigenschaft erfüllen, sind beispielsweise \cb{} \cite{curveball} und \gc{}.
+%
 
-Algorithmen, welche diese Eigenschaft erfüllen, sind beispielsweise \cb{} \cite{curveball} und \gc{}.
 
-Ziel dieser Arbeit ist die Anpassung von \gc{} an bipartite Graphen zur 
-Reduzierung der Laufzeit. 
+Ziel dieser Bachelorarbeit ist die Anpassung von \gc{} an bipartite Graphen zur 
+Reduzierung der Laufzeit. Der entwickelte Algorithmus wird Teil des OpenSource Projekts \nk{}\cite{nk_page} werden.

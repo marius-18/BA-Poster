@@ -1,0 +1,27 @@
+In Abbildung \ref{fig:messung_slowdown} lassen sich die Laufzeiten der verschiedenen Varianten vergleichen.
+Dabei wird für jede Instanz \red{das Verhältnis der Laufzeit der jeweiligen Variante zur geringsten Laufzeit berechnet.}
+Die einzelnen Slowdowns sind für jede Variante aufsteigend sortiert und als Kurve eingezeichnet.
+Bei einer guten Methode verläuft die Kurve möglichst lange nahe der 1 und steigt nicht stark an.
+Die beiden besten Methoden sind \red{markiert}.
+
+
+\begin{figure}[H]
+\centering
+	\includegraphics[width = 0.49\textwidth]{../BA-LaTeX/figures/slowdown.pdf}
+	\caption[Slowdown der einzelnen Varianten im jeweiligen Vergleich zur Variante mit der geringsten Laufzeit.]
+	{Slowdown der einzelnen Varianten im jeweiligen Vergleich zur Variante mit der geringsten Laufzeit.}
+	\label{fig:messung_slowdown}
+\end{figure}
+
+Die Abbildung \ref{fig:messung_small} zeigt einen direkten Vergleich der zwei besten Methoden auf ausgewählten Instanzen.
+Während die Laufzeiten bei den meisten Instanzen nahezu identisch sind, existieren einige Instanzen, bei denen die
+in blau gekennzeichnete Variante eine deutlich geringere Laufzeit aufweist. Deswegen wird diese Variante %zur Implementierung eines \ct{es}
+ausgewählt.
+
+\begin{figure}[H]
+\centering
+	\includegraphics[width = 0.47\textwidth]{../BA-LaTeX/figures/small_aufsteigend.pdf}
+	\caption[Laufzeitvergleich der zwei besten Varianten auf ausgewählten Instanzen] 
+	{Vergleich der Laufzeiten der zwei besten Varianten. Auf der horizontalen Achse sind die Instanzen mit der jeweiligen Größe der beiden Arrays aufgetragen.}
+	\label{fig:messung_small}
+\end{figure}

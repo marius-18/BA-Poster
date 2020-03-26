@@ -1,7 +1,6 @@
 \documentclass[a1,portrait]{a0poster}
 \usepackage{include/ae-goethe-poster}
 
-
 \RequirePackage[ngerman]{babel}
 \RequirePackage[utf8]{inputenc}
 \RequirePackage[T1]{fontenc}
@@ -11,60 +10,24 @@
 \RequirePackage{textcomp}
 \RequirePackage{eurosym}
 \usetikzlibrary{decorations.pathreplacing}
-%\usepackage{subfigure}
 \usepackage{url}
+\usepackage{cite}
 
 \usepackage[Algorithmus]{algorithm}
-\usepackage[noend]{algpseudocode}
-
-\usepackage{cite}
 
 
 % Please only use to following colors:
-% goetheblau, hellgrau, sandgrau, dunkelgrau, purple, emorot, senfgelb, gruen, magenta, orange
-% sonnengelb, hellgruen, lichtblau
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Defines for mathematical notation. Add additional defines as needed.
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\def\O{\mathcal{O}}
-\def\sort{\mathrm{sort}}
-\def\scan{\mathrm{scan}}
-\def\dist{\mathrm{dist}}
-
+% goetheblau, hellgrau, sandgrau, dunkelgrau, purple, emorot, senfgelb,
+% gruen, magenta, orange, sonnengelb, hellgruen, lichtblau
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%   DEFINE MAKROS
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\newcommand{\SorSor}{\textbf{SortSort}}
-\newcommand{\SorSea}{\textbf{SortSearch}}
-\newcommand{\SeaSor}{\textbf{SearchSort}}
-\newcommand{\SetSea}{\textbf{SetSearch}}
-\newcommand{\SeaSet}{\textbf{SearchSet}}
-\newcommand{\USetSea}{\textbf{USetSearch}}
-\newcommand{\SeaUSet}{\textbf{SearchUSet}}
-\newcommand{\perm}{\textbf{Permutation}}
-\newcommand{\distr}{\textbf{Distribution}}
-\newcommand{\true}{\textbf{true}}
-\newcommand{\false}{\textbf{false}}
-
 \newcommand{\gc}{Global-Curveball}
 \newcommand{\ct}{Curveball-Tausch}
 \newcommand{\cb}{Curveball}
-
-\newcommand{\partvek}{Partitions-Array}
-
-
-\newcommand{\la}{large}
-\newcommand{\sm}{small}
-\newcommand{\fr}{fraction}
-
-
 \newcommand{\nk}{NetworKit}
-\newcommand{\cpp}{C++ }
 
 \newcommand{\red}[1]{\textcolor{red}{\textbf{#1}}}
 \newcommand{\blue}[1]{\textcolor{blue}{#1}}
@@ -77,76 +40,62 @@
 
 \conference{Randomisierung Massiver Bipartiter Graphen}
 \author{Marius Hagemann}
-\title{Bipartiter \gc{}}
-
+\title{Engineering Bipartite \gc{}}
 
 
 \begin{document}
 \parindent0mm
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%   ERSTE ZEILE
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\small
 
 \begin{multicols}{2}
 	
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%   Einleitung (links)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%   Einleitung 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-
-\section{Einleitung}
+\section{\large Einleitung}
 \input{include/01_Einleitung.tex}
 
-\section{Grundlagen}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%   Grundlagen 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{\large Grundlagen}
 \input{include/02_Grundlagen.tex}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%   Implementierung 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Beschreibung}
-\input{include/0x_Beschreibung.tex}
+\section{\large Implementierung eines \ct{es}}
+\input{include/03_Implementierung.tex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%   Experimentelle Untersuchung 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{\large Experimentelle Untersuchung}
+\input{include/04_Experiment.tex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%   Ergebnis 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{\large Ergebnis}
+\input{include/05_Ergebnis.tex}
 
 
-\section{Grundlagen}
-\input{include/0x_Auswertung.tex}
-
-\section{blabla}
-\input{include/09_letztes.tex}
-
-
-%\columnbreak
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%   ....... (rechts)
+%%%%%   Quellen
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\renewcommand\refname{\large Literatur}
 
-
-
+\tiny{
+	\bibliography{../BA-LaTeX/quellen}
+	\bibliographystyle{plain}
+}
 
 \end{multicols}
-
-
-
-
-%\textcolor{goetheblau}{\rule{\textwidth}{3pt}}
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%   Zweite ZEILE
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-%\begin{multicols}{2}
-%\columnbreak
-%\end{multicols}
-%\textcolor{goetheblau}{\rule{\textwidth}{3pt}}
-
-
-
-
-
 \end{document}

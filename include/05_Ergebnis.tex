@@ -1,0 +1,17 @@
+Abschließend wird der neu entwickelte bipartite \gc{} mit dem schon existierenden \cb{} \red{auf verschiedenen Graphen} verglichen.
+Die gemessenen Laufzeiten sind in Abbildung \ref{fig:speedup_komplett} dargestellt. Auf den Instanzen mit 
+weit mehr als 10.000 Knoten zeigt der bipartite \gc{} eine deutlich bessere Laufzeit. Es wird ein Speedup von 
+bis zu 17 erreicht. Dies liegt vor allem an der Parallelität im bipartiten \gc{}. Aber auch ohne
+die Parallelisierung erreicht der sequenzielle bipartite \gc{} einen Speedup von ungefähr 2.
+
+
+
+\begin{figure}[H]
+\centering
+	\includegraphics[width = 0.45\textwidth]{../BA-LaTeX/figures/speedup.pdf}
+	\caption[Laufzeitvergleich von bipartitem \gc{} und einer abgeänderten Variante von \cb{}]
+	{Vergleich von bipartitem \gc{} und \cb{}.
+	Als Beschriftung dient die Anzahl an Knoten, Kanten und aktiven Knoten.}
+	\label{fig:speedup_komplett}
+\end{figure} 
+   
